@@ -27,7 +27,7 @@ jobs:
           sudo apt-get update && sudo apt-get install packer
           echo $ssh_private_key_file
           echo $ssh_private_key_file > staging.pem
-          chmod 600 staging.pem
+          chmod 777 staging.pem
           ls -ltrh
           pwd
           cat staging.pem
