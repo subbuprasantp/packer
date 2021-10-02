@@ -1,0 +1,28 @@
+{
+    "variables": {
+        "aws_access_key": "{{env `AWS_ACCESS_KEY_ID`}}",
+        "aws_secret_key": "{{env `AWS_SECRET_ACCESS_KEY`}}",
+        "ssh_username": "ubuntu",
+        "ami": "ami-055147723b7bca09a",
+        "ami_name": "cardup-adminhhh",
+        "instance_type": "t3.micro",
+        "region": "ap-southeast-1",
+        "ssh_keypair_name": "StagingStarter",
+        "ssh_private_key_file":"staging.pem",
+        "PASSWORD": "{{env `PASSWORD`}}"
+    },
+    "builders": [
+        {
+            "access_key": "{{user `aws_access_key`}}",
+            "ami_name": "{{user `ami_name`}}",
+            "instance_type": "{{user `instance_type`}}",
+            "region": "{{user `region`}}",
+            "secret_key": "{{user `aws_secret_key`}}",
+            "source_ami": "{{user `ami`}}",
+            "ssh_username": "{{user `ssh_username`}}",
+            "ssh_keypair_name": "{{user `ssh_keypair_name`}}",
+            "ssh_private_key_file":"{{user `ssh_private_key_file`}}",
+            "type": "amazon-ebs"
+        }
+    ]
+}
