@@ -1,7 +1,7 @@
 name: 'Terraform'
 
 on:
-  pull_request:
+  push:
    branches:
     - staging
    paths:
@@ -27,4 +27,4 @@ jobs:
           sudo apt-get update && sudo apt-get install packer
           echo "${ssh_private_key_file}" > staging.pem
           chmod 600 staging.pem
-          packer validate packer-admin.json
+          packer build packer-admin.json
