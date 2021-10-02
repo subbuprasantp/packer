@@ -31,4 +31,4 @@ jobs:
           ls -ltrh
           pwd
           cat staging.pem
-          packer build packer-admin.json
+          packer validate packer-admin.json
