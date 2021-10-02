@@ -22,7 +22,7 @@ jobs:
           ssh_private_key_file: ${{ secrets.ssh_private_key_file }}
         run: |
           echo $ssh_private_key_file > staging.pem
-          hmod 600 staging.pem
+          chmod 600 staging.pem
               
       - name: Packer build
         uses: ExitoLab/packer_build_action_aws@v0.2.10
