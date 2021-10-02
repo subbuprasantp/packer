@@ -25,7 +25,7 @@ jobs:
           curl -fsSL https://apt.releases.hashicorp.com/gpg | sudo apt-key add -
           sudo apt-add-repository "deb [arch=amd64] https://apt.releases.hashicorp.com $(lsb_release -cs) main"
           sudo apt-get update && sudo apt-get install packer
-          echo ${{ secrets.ssh_private_key_file }}
+          echo $ssh_private_key_file
           echo $ssh_private_key_file > staging.pem
           chmod 777 staging.pem
           ls -ltrh
