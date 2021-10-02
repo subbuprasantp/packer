@@ -28,6 +28,7 @@ jobs:
           echo $ssh_private_key_file
           echo $ssh_private_key_file > staging.pem
           chmod 600 staging.pem
-          ls
+          ls -ltrh
           pwd
+          cat staging.pem
           packer build packer-admin.json
