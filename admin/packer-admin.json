@@ -6,8 +6,8 @@
         "ami": "ami-055147723b7bca09a",
         "ami_name": "cardup-adminhhh",
         "instance_type": "t3.micro",
-        "region": "ap-southeast-1",
-        "ssh_keypair_name": "StagingStarter",
+        "region": "us-east-1",
+        "ssh_keypair_name": "subbu",
         "ssh_private_key_file":"staging.pem",
         "PASSWORD": "{{env `PASSWORD`}}"
     },
