@@ -1,4 +1,4 @@
-name: 'Terraform'
+name: 'Packer-Push'
 
 on:
   push:

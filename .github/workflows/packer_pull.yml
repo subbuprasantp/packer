@@ -1,4 +1,4 @@
-name: 'Terraform'
+name: 'Packer-Pull'
 
 on:
   pull_request:
