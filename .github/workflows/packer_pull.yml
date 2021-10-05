@@ -29,3 +29,4 @@ jobs:
           echo "${ssh_private_key_file}" > staging.pem
           chmod 600 staging.pem
           packer validate packer-admin.json
+          
