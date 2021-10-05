@@ -1,7 +1,6 @@
 name: 'Packer-Pull'
 
 on:
-  workflow_dispatch:
   pull_request:
    branches:
     - staging
@@ -29,4 +28,3 @@ jobs:
           echo "${ssh_private_key_file}" > staging.pem
           chmod 600 staging.pem
           packer validate packer-admin.json
-          
