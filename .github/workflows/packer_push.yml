@@ -6,6 +6,7 @@ on:
     - staging
    paths:
       - admin/**
+  workflow_dispatch:    
 
 jobs:
   packer_build:
