@@ -6,6 +6,7 @@ on:
     - staging
    paths:
       - admin/**
+  workflow_dispatch:    
 
 jobs:
   packer_validate:
@@ -28,3 +29,4 @@ jobs:
           echo "${ssh_private_key_file}" > staging.pem
           chmod 600 staging.pem
           packer validate packer-admin.json
+          
